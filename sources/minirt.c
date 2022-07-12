@@ -1,5 +1,11 @@
 #include "../includes/minirt.h"
 
+void	program_exit(void)
+{
+	printf("Program exit!\n");
+	exit (0);
+}
+
 int main(void)
 {
     void	*mlx;
@@ -17,6 +23,9 @@ int main(void)
 	window = mlx_new_window(mlx, scene->width,scene->hight, "miniRT");
     ray_tracing(mlx, window, scene);
 	//free scene(scene);
+	//TODO do handler ESC key, i stupid
+	//mlx_hook(window, KEY_ESC, 0,  (int (*)()) & program_exit, NULL);
+	mlx_hook(window, KEY_EXIT, 0, (int (*)()) & program_exit, NULL);
 	mlx_loop(mlx);
 	return (0);
 }
