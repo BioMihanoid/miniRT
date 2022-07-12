@@ -8,14 +8,12 @@
 # include <fcntl.h>
 # include <stdio.h>
 
-# include "../minilib/mlx.h"
-# include "./../libft/libft.h"
+# include "../minilibx/mlx.h"
 # include "vector.h"
 # include "utils.h"
 # include "sphere.h"
 # include "camera.h"
 # include "scene.h"
-
-void	ray_tracing();
+# include "view_plane.h"
 
 #endif

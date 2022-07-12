@@ -14,7 +14,7 @@ int main(void)
 	t_scene		*scene = new_scene(cam, sphere);
 	scene->width = 800;
 	scene->hight = 600;
-	window = mlx_new_window(mlx, scene->width,scene->width, "miniRT");
+	window = mlx_new_window(mlx, scene->width,scene->hight, "miniRT");
     ray_tracing(mlx, window, scene);
 	//free scene(scene);
 	mlx_loop(mlx);
