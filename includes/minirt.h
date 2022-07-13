@@ -16,4 +16,7 @@
 # include "scene.h"
 # include "view_plane.h"
 
+#define     Width 1000
+#define     Height 800
+
 #endif

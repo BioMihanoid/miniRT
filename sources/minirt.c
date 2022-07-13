@@ -6,6 +6,8 @@ void	program_exit(void)
 	exit (0);
 }
 
+// перетащил размеры окна в minirt.h (они статичны)
+
 int main(void)
 {
     void	*mlx;
@@ -18,8 +20,6 @@ int main(void)
 	t_vector	*cam_direction = new_vector(0, 0, -1);
 	t_camera	*cam = new_cam(cam_origin, cam_direction, 70);
 	t_scene		*scene = new_scene(cam, sphere);
-	scene->width = 800;
-	scene->hight = 600;
 	window = mlx_new_window(mlx, scene->width,scene->hight, "miniRT");
     ray_tracing(mlx, window, scene);
 	//free scene(scene);
